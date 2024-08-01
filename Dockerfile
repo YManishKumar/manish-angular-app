@@ -7,5 +7,6 @@ RUN npm run build --prod
 
 
 #SATGE 2
+
 FROM nginx:1.14.1-alpine
 COPY --from=builder /app/dist/test-app /usr/share/nginx/html
