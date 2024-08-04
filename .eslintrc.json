@@ -1,0 +1,35 @@
+{
+    "root": true,
+    "ignorePatterns": ["projects/**/*"],
+    "overrides": [
+      {
+        "files": ["*.ts"],
+        "parserOptions": {
+          "project": ["tsconfig.json"],
+          "createDefaultProgram": true
+        },
+        "extends": [
+          "plugin:@angular-eslint/recommended",
+          "plugin:@typescript-eslint/recommended",
+          "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        ],
+        "rules": {
+          // Add any additional TypeScript or Angular specific rules here
+          "@typescript-eslint/no-explicit-any": "off",
+          "@typescript-eslint/explicit-module-boundary-types": "off",
+          "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+          // "no-var": "off"
+          // "prefer-const": "off", 
+          // "no-console": "off"
+        }
+      },
+      {
+        "files": ["*.html"],
+        "extends": ["plugin:@angular-eslint/template/recommended"],
+        "rules": {
+          // Add any template-specific rules here
+        }
+      }
+    ]
+  }
+  
